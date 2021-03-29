@@ -151,22 +151,27 @@
 
   \begin{block}{Bioinformatics Methods}
 
-    De-noising the data, an initial quality control step, will be computationally intensive, so we use a
-    high-performance cluster. (Figure \ref{fig:dada2})
+    TODO: Deal with references
+    TODO: Unioned prov DAG if we need to fill space
 
-    \begin{figure}[tph!]
-      {\includegraphics[height=16cm]{assets/HPC_Analysis}}
-      \caption{\,Script used for denoising demultiplexed sequences and summarizing the results using NAU's Monsoon cluster}
-      \label{fig:dada2}
-    \end{figure}
+    Analysis of 16s rRNA data was performed with QIIME 2 2020.2
+    (Bolyen et al. 2019). Raw sequence data were demultiplexed and quality
+    filtered using the \code{q2‐demux} plugin followed by denoising with
+    DADA2 (Callahan et al. 2016) (via \code{q2‐dada2}). A phylogeny was built
+    by inserting resulting amplicon sequence variants (ASVs) into a reference
+    database constructed from greengenes 13\_8 using the SEPP algorithm (via
+   \code{q2‐fragment-insertion}). ASVs were assigned taxonomic annotations from
+   the Greengenes 13\_8 99\% OTUs reference sequences (McDonald et al. 2012)
+   using \code{q2‐feature‐classifier classify-sklearn} (Bokulich et al.
+   2018a)
 
-    \begin{tcolorbox}
-    [width=\textwidth, colframe=blue]
-    {The integrated and decentralized handling of provenance in
-    \code{Artifact}s makes it easy for QIIME 2 users to transfer files and run jobs
-    through any QIIME 2 interface on any host, accumulating and retaining
-    accurate provenance information}.
-  \end{tcolorbox}
+    .... ETC
+    
+    TODO: diversity details, longitudinal. Rarefaction depth is up to date.
+    Alpha‐diversity metrics (TODO: name Figure methods), beta diversity
+    metrics (TODO: name Figure methods), and Principle Coordinate Analysis
+    (PCoA) were estimated using q2‐diversity after samples were rarefied
+    (subsampled without replacement) to 13102 sequences per sample.
 
   \end{block}
 
