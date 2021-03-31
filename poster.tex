@@ -136,17 +136,18 @@
 
   \begin{block}{Laboratory Methods}
 
-    Here's some filler text about RNA, mice, and samples on ice.
+  \begin{figure}[tph!]
+    {\includegraphics[height=14cm]{assets/qPCR_methods}}
+    \caption{Visual rendering of qPCR wet lab processes. Samples are collected at 8, 24, and 52 weeks. RNA is extracted and reverse transcribed to cDNA. cDNA undergoes qPCR, and the resulting data is analyzed.}
+    \label{fig:qpcrMethods}
+  \end{figure}
 
-   \begin{tcolorbox}
-   [width=\textwidth, colframe=blue]
-   {Here's some background stuff in a callout box:}
-    \begin{itemize}
-      \item {followed by}
-      \item {some}
-      \item {bullet points}
-    \end{itemize}
-    \end{tcolorbox}
+  \begin{figure}[tph!]
+    {\includegraphics[height=14cm]{assets/16s_lab_methods}}
+    \caption{Visual rendering of 16s wet lab processes. Samples are collected at 8, 24, and 52 weeks. DNA is extracted and 16s rRNA is transcribed from it. Sequencing is performed with an Illumina MiSeq, and the resulting data is analyzed with QIIME 2.}
+    \label{fig:16sMethods}
+  \end{figure}
+
   \end{block}
 
   \begin{block}{Bioinformatics Methods}
@@ -164,6 +165,13 @@
       \item {diversity analysis \code{q2-diversity} \code{q2-emperor} and \code{q2-longitudinal}}
       \item {differential abundance: ANCOM via \code{q2-composition}}
     \end{itemize}
+
+    Analysis of qPCR data was performed with Microsoft Excel and GraphPad Prism
+    \begin{itemize}
+      \item {Raw data normalized to Relative Quantification (RQ) AKA "fold change"}
+      \item {RQ data is grouped by Strain and sample collection time point}
+      \item {RQ per sample is plotted for each amplified cytokine}
+    \end{itemize} 
 
   \end{block}
 
