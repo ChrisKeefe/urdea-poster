@@ -61,7 +61,7 @@
 % Title
 % ====================
 
-\title{Ileum microbiota composition and inflammatory response\\ in triple transgenic mice modelling Alzheimer's disease}
+\title{Ileum microbiota composition and inflammatory response\\ in triple transgenic mice modeling Alzheimer's disease}
 
 \author{Kathryn Conn \textsuperscript{*} \and Christopher R. Keefe \textsuperscript{*} \and Emily Borsom \and Allyson Hirsh \and Melanie Palma Avila \and J. Gregory Caporaso \textsuperscript{†} \and Emily K. Cope \textsuperscript{†} }
 
@@ -129,8 +129,8 @@
 
     \textbf{Hypothesis:}
     We expect to see mice genetically predisposed to developing AD
-    pathologies exhibit a decreased species richness and altered composition
-    of the ileum microbiome and upregulation of proinflammatory cytokines.
+    pathologies exhibit altered composition of the ileum microbiome and
+    upregulation of proinflammatory cytokines.
       
   \end{block}
 
@@ -151,27 +151,19 @@
 
   \begin{block}{Bioinformatics Methods}
 
-    TODO: Deal with references
+    TODO: Deal with references \\
     TODO: Unioned prov DAG if we need to fill space
 
-    Analysis of 16s rRNA data was performed with QIIME 2 2020.2
-    (Bolyen et al. 2019). Raw sequence data were demultiplexed and quality
-    filtered using the \code{q2‐demux} plugin followed by denoising with
-    DADA2 (Callahan et al. 2016) (via \code{q2‐dada2}). A phylogeny was built
-    by inserting resulting amplicon sequence variants (ASVs) into a reference
-    database constructed from greengenes 13\_8 using the SEPP algorithm (via
-   \code{q2‐fragment-insertion}). ASVs were assigned taxonomic annotations from
-   the Greengenes 13\_8 99\% OTUs reference sequences (McDonald et al. 2012)
-   using \code{q2‐feature‐classifier classify-sklearn} (Bokulich et al.
-   2018a)
-
-    .... ETC
-    
-    TODO: diversity details, longitudinal. Rarefaction depth is up to date.
-    Alpha‐diversity metrics (TODO: name Figure methods), beta diversity
-    metrics (TODO: name Figure methods), and Principle Coordinate Analysis
-    (PCoA) were estimated using q2‐diversity after samples were rarefied
-    (subsampled without replacement) to 13102 sequences per sample.
+    Analysis of 16s rRNA data was performed with QIIME 2 2020.2 (Bolyen et al. 2019).
+    \begin{itemize}
+      \item {sequence data demultiplexing and quality filtering: \code{q2‐demux}}
+      \item {denoising to amplicon sequence variants (ASVs): DADA2 (Callahan et al. 2016) (via \code{q2‐dada2})}
+      \item {phylogeny constructed by inserting ASVs into a greengenes 13\_8 reference database using SEPP (via \code{q2‐fragment-insertion})}
+      \item {taxonomic annotations assigned from greengenes 13\_8 99\% OTUs (McDonald et al. 2012) using \code{q2‐feature‐classifier classify-sklearn} (Bokulich et al. 2018a).}
+      \item {unequal sampling depths were normalized by rarefying to 13102 sequences per sample}
+      \item {diversity analysis \code{q2-diversity} \code{q2-emperor} and \code{q2-longitudinal}}
+      \item {differential abundance: ANCOM via \code{q2-composition}}
+    \end{itemize}
 
   \end{block}
 
