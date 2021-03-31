@@ -182,20 +182,39 @@
 \begin{column}{\colwidth}
 
   \begin{block}{Visualizations}
-    \begin{figure}[tph!]
-      {\includegraphics[height=14cm]{assets/provenance}}
-      \caption{\,Provenance tree describing the production of our taxonomic bar plot visualization. QR code provides interactive access to both provenance tree and bar plot (Figure 4).}
-      \label{fig:provenance}
+
+    % Use this figure if we want Arg1 and Nos2 figures side-by-side
+    \begin{figure}[!htb]
+      \minipage{0.48\textwidth}%
+        \begin{center}
+          \includegraphics[width=\linewidth]{assets/arg1_Ileum}
+        \end{center}
+      \endminipage
+      % \hskip 1cm
+      \minipage{0.48\textwidth}
+        \begin{center}
+          \includegraphics[width=\linewidth]{assets/nos2_Ileum}
+        \end{center}
+      \endminipage\hfill
+      \caption{3xTg-AD mice express higher levels of Arg1 and Nos2 cytokines than Wild Type mice. Arg1 and Nos2 cytokines are expressed more strongly at 52 weeks than at 8 weeks.}
+      \label{fig:qpcrResults}
     \end{figure}
 
-    \begin{figure}[tph!]
-      {\includegraphics[height=20cm]{assets/taxabar-plot}}
-      \caption{\,Taxonomic bar plot sorted by Average Soil Relative Humidity on the x-axis }
-      \label{fig:taxabar-plot}
-    \end{figure}
+    % Use these figures if we want to stack Arg1 and Nos2 figures vertically
+    % \begin{figure}[tph!]
+    %   {\includegraphics[height=20cm]{assets/arg1_Ileum}}
+    %   \caption{\,Provenance tree describing the production of our taxonomic bar plot visualization. QR code provides interactive access to both provenance tree and bar plot (Figure 4).}
+    %   \label{fig:provenance}
+    % \end{figure}
+
+    % \begin{figure}[tph!]
+    %   {\includegraphics[height=20cm]{assets/nos2_Ileum}}
+    %   \caption{\,Taxonomic bar plot sorted by Average Soil Relative Humidity on the x-axis }
+    %   \label{fig:taxabar-plot}
+    % \end{figure}
 
     \begin{figure}[tph!]
-      {\includegraphics[height=18cm]{assets/q2studio}}
+      {\includegraphics[height=18cm]{assets/taxabar-plot}}
       \caption{\,QIIME 2 Studio provides GUI access to all QIIME 2 plugins installed in the currently active QIIME 2 environment}
       \label{fig:q2studio}
     \end{figure}
@@ -214,19 +233,17 @@
 
 \begin{column}{\colwidth}
     \begin{block}{Results}
-      Here are some things we learned from 16s:
+      \textbf{qPCR results:}
+      \begin{itemize}
+        \item Humanized 3xTg-AD mice express significantly higher levels of Arg1 and Nos2 cytokines than paired Wild Type mice
+        \item Arg1 and Nos2 cytokines are expressed at significantly higher levels at 52 weeks than at 8 weeks
+      \end{itemize}
+
+      \textbf{16s results:}
       \begin{itemize}
       \item at 8 and 24 weeks, we see no statistically significant differences in alpha or beta diversity on Strain
       \item We see significant difference on age-week, but our extraction scheme may confound these results*
       \item Order Erysipelotrichales is the most important taxon in describing change over time from 8->24 weeks
-      \end{itemize}
-
-      Here are some things we learned from qPCR:
-
-      \begin{itemize}
-        \item Critters are cool
-        \item Mice are nice
-        \item Bacteria are bomb
       \end{itemize}
 
     \begin{tcolorbox}
