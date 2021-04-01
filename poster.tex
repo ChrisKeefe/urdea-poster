@@ -124,29 +124,31 @@
       \item The ileum, the most distal region of the small intestine, is a known site for immune modulation
       \item Studies correlate gut microbiome characteristics and AD pathology, possibly facilitated by bidirectional communication between gut microbes and the brain along the 'gut-brain axis'
       \item AD is characterized by neuroinflammation, neurofibrillary tangles, and aggregated amyloid-β plaques in the brain.
+      \item Mice with AD are pre-symptomatic at 8 weeks of age, have begun to exhibit AD pathologies at 24 weeks, and have advanced AD pathologies at 52 weeks.
       \item These pathologies may be influenced by inflammatory cytokines produced in the gut.
     \end{itemize}
 
     \textbf{Hypothesis:}
-    We expect to see mice genetically predisposed to developing AD
-    pathologies exhibit altered composition of the ileum microbiome and
-    upregulation of proinflammatory cytokines.
+    Mice genetically predisposed to developing AD pathologies will exhibit
+    altered composition of the ileum microbiota and upregulation of
+    proinflammatory cytokines. These shifts will be increasingly visible as
+    disease pathologies develop.
       
   \end{block}
 
   \begin{block}{Laboratory Methods}
 
   \begin{figure}[tph!]
-    {\includegraphics[height=14cm]{assets/qPCR_methods}}
-    \caption{Visual rendering of qPCR wet lab processes. Samples are collected at 8, 24, and 52 weeks. RNA is extracted and reverse transcribed to cDNA. cDNA undergoes qPCR, and the resulting data is analyzed.}
-    \label{fig:qpcrMethods}
+    {\includegraphics[width=.95\linewidth]{assets/lab_methods}}
+    \caption{Graphical rendering of wet lab processes. Samples are collected
+    at 8, 24, and 52 weeks. DNA and RNA are extracted. RNA is then reverse
+    transcribed to cDNA. cDNA undergoes qPCR, and the resulting data are
+    analyzed. Concurrently, the 16s rRNA gene is amplified using Polymerase
+    Chain Reaction (PCR). Sequencing is performed with an Illumina MiSeq, and
+    the resulting data are analyzed with QIIME 2.}
+    \label{fig:lab_methods}
   \end{figure}
 
-  \begin{figure}[tph!]
-    {\includegraphics[height=14cm]{assets/16s_lab_methods}}
-    \caption{Visual rendering of 16s wet lab processes. Samples are collected at 8, 24, and 52 weeks. DNA is extracted and 16s rRNA is transcribed from it. Sequencing is performed with an Illumina MiSeq, and the resulting data is analyzed with QIIME 2.}
-    \label{fig:16sMethods}
-  \end{figure}
 
   \end{block}
 
@@ -254,13 +256,13 @@
     \begin{block}{Results}
       \textbf{qPCR results:}
       \begin{itemize}
-        \item Humanized 3xTg-AD mice express significantly higher levels of Arg1 and Nos2 cytokines than paired Wild Type mice
+        \item Humanized 3xTg-AD mice express significantly higher levels of Arg1 and Nos2 cytokines than age-matched Wild Type mice
         \item Arg1 and Nos2 cytokines are expressed at significantly higher levels at 52 weeks than at 8 weeks
       \end{itemize}
 
       \textbf{16s results:}
       \begin{itemize}
-      \item at 8 and 24 weeks, we see no statistically significant differences in alpha or beta diversity on Strain
+      \item At 8 and 24 weeks, we see no statistically significant differences in alpha or beta diversity on Strain
       \item We see significant difference on age-week, but our extraction scheme may confound these results*
       \item Order Erysipelotrichales is the most important taxon in describing change over time from 8->24 weeks
       \end{itemize}
