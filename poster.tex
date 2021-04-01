@@ -152,9 +152,6 @@
 
   \begin{block}{Bioinformatics Methods}
 
-    TODO: Deal with references \\
-    TODO: Unioned prov DAG if we need to fill space
-
     Analysis of 16s rRNA data was performed with QIIME 2 2020.2 (Bolyen et al. 2019).
     \begin{itemize}
       \item {sequence data demultiplexing and quality filtering: \code{q2‐demux}}
@@ -196,7 +193,7 @@
           \includegraphics[width=\linewidth]{assets/nos2_Ileum}
         \end{center}
       \endminipage\hfill
-      \caption{3xTg-AD mice express higher levels of Arg1 and Nos2 cytokines than Wild Type mice. Arg1 and Nos2 cytokines are expressed more strongly at 52 weeks than at 8 weeks.}
+      \caption{\,Gene expression of cytokines Arg1 and Nos2 is significantly increased in 3xTg-AD mice over WT mice. Significant differences exist in gene expression of cytokines Arg1 and Nos2 between 8 weeks and 52 weeks of age (Mann-Witney p<0.05).}
       \label{fig:qpcrResults}
     \end{figure}
 
@@ -214,19 +211,19 @@
     % \end{figure}
 
     \begin{figure}[tph!]
-      {\includegraphics[height=18cm]{assets/taxabar-plot}}
+      {\includegraphics[height=20cm]{assets/taxabar-plot}}
       \caption{\,QIIME 2 Studio provides GUI access to all QIIME 2 plugins installed in the currently active QIIME 2 environment}
       \label{fig:q2studio}
     \end{figure}
+
+  \begin{figure}[tph!]
+    {\includegraphics[width=.75\linewidth]{assets/faith_pd_group_sig_strain}}
+    {\includegraphics[width=.75\linewidth]{assets/faith_pd_group_sig_extraction}}
+      \caption{\,QIIME 2 Studio provides GUI access to all QIIME 2 plugins installed in the currently active QIIME 2 environment}
+      \label{fig:faith_strain}
+    \end{figure}
   \end{block}
 
-  \begin{block}{Project Funding}
-    This work was supported in part by the 2020-21 Urdea Collaborative
-    Research Award Program to Kathryn Conn and Chris Keefe, through the
-    Northern Arizona University Office of Undergraduate Research \& Creative
-    Activity, and by the Arizona Alzheimer’s Consortium (Award number
-    CTR040636) to Emily Cope and Greg Caporaso.
-  \end{block}
 \end{column}
 
 \separatorcolumn
@@ -248,30 +245,47 @@
 
     \begin{tcolorbox}
     [width=\textwidth, colframe=blue]
-    {*Do we want to discuss the possible confounding effect extracting all 8- and 24-week samples in separate groups here? }.
+      * DNA was extracted from all 8-week samples in one batch, and all
+      24-weeks samples in another. Though we find significant changes in
+      alpha and beta diversity over time, it is impossible for us to rule out
+      extraction bias as a confounding factor. Control samples extracted
+      and sequenced alongside our ileum samples may allow us to control for 
+      that effect and avoid re-sequencing for future publications. 
     \end{tcolorbox}
 
-    \begin{figure}[tph!]
-      {\includegraphics[height=17cm]{assets/emperor}}
-      \caption{\,Color gradient represents Average Soil Relative Humidity, with purple ≈ 18 and yellow = 100. Vector colors represent independent clades. \\ \\The magnitude and direction of a vector represents the relative contribution of a given amplicon sequence variant (ASV) to the distance between samples (points). Red: Unknown Bacteria ASV (Kingdom), Green: Bacteria (Kingdom) Actinobacteria (Phylum) Actinobacteria (Class), Blue: Bacteria (Kingdom) Actinobacteria (Phylum) Acidimicrobiia (Class), Purple: Bacteria (Kingdom) Proteobacteria (Phylum) Gammaproteobacteria (Class)}
-      \label{fig:emperor}
+    \begin{figure}[!htb]
+      \minipage{0.48\textwidth}%
+        \begin{center}
+          \includegraphics[width=\linewidth]{assets/w_unifrac_age_wk}
+        \end{center}
+      \endminipage
+      \minipage{0.48\textwidth}
+        \begin{center}
+          \includegraphics[width=\linewidth]{assets/w_unifrac_extraction}
+        \end{center}
+      \endminipage\hfill
+      \caption{Weighted Unifrac PCoA plots colored on "age in weeks" and
+      "extraction" show meaningful separation. They also show that all 8-week
+      samples were extracted together, as were all 24-weeks samples,
+      complicating interpretation.}
+      \label{fig:qpcrResults}
     \end{figure}
 
   \end{block}
 
   \begin{block}{Discussion}
-
     Though complete longitudinal data are not yet available, the results
-    above support our hypothesis as follows: qPCR data seems to indicate that
-    our most significant results are at 52 weeks. We look forward to the
-    sequencing of our final 16s data, and hope it supports the trends we see in qPCR
+    to date support our hypothesis: qPCR data indicates that our most
+    significant results are at 52 weeks, which is not unexected. We look
+    forward to the sequencing of our final 16s data, and hope it supports the
+    trends we see in qPCR.
   \end{block}
 
   \begin{block}{Future Work}
 
     \begin{itemize}
-      \item \textbf{Final 52-Week Analysis} Get some more data, see if these trends hold
-      \item \textbf{Tissue study} Rename this bullet, discuss comparison with plaque/tangle data
+      \item \textbf{52-Week Analysis} Investigation of correlations between qPCR findings and 52-week 16s data
+      \item \textbf{Immunohistochemistry} Quantification of neurofibrillary tangles and amyloid-β plaques
     \end{itemize}
 
   \end{block}
@@ -279,10 +293,20 @@
   % TODO: We'll deffo need references
   % Is it appropriate to qr-link our refs? The list from Q2 is likely to be long
   \begin{block}{References}
+    References available at https://github.com/chriskeefe/urdea-poster/refs.bib
+    % TODO: Replace this with an actual QR code
+    \includegraphics[height=5cm]{assets/repo}
+    % \nocite{*}
+    % \bibliographystyle{acm}\bibliography{poster}
 
-    \nocite{*}
-    \bibliographystyle{acm}\bibliography{poster}
+  \end{block}
 
+  \begin{block}{Project Funding}
+    This work was supported in part by the 2020-21 Urdea Collaborative
+    Research Award Program to Kathryn Conn and Chris Keefe, through the
+    Northern Arizona University Office of Undergraduate Research \& Creative
+    Activity, and by the Arizona Alzheimer’s Consortium (Award number
+    CTR040636) to Emily Cope and Greg Caporaso.
   \end{block}
 
   \begin{figure}
