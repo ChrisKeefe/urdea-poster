@@ -26,6 +26,7 @@ Readme text below modified from: [Gemini README] and subject to [Gemini License]
 * LaTeX package dependencies including beamerposter (these usually come with
   your TeX installation, but if not, you can get them from [CTAN])
 * [Raleway] and [Lato], which are both available under Open Font License
+* The [nature] citation style by Peter Czoshke, vendored here.
 
 ## Usage
 
@@ -44,3 +45,4 @@ Readme text below modified from: [Gemini README] and subject to [Gemini License]
 [Lato]: https://www.fontsquirrel.com/fonts/lato
 [Gemini README]: https://github.com/anishathalye/gemini/blob/master/README.md
 [Gemini License]: https://github.com/anishathalye/gemini/blob/master/LICENSE.md
+[nature]: https://www.ctan.org/tex-archive/macros/latex/contrib/nature
