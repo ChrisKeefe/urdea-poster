@@ -124,7 +124,7 @@
       \item The ileum, the most distal region of the small intestine, is a known site for immune modulation
       \item Studies correlate gut microbiome characteristics and AD pathology, possibly facilitated by bidirectional communication between gut microbes and the brain along the 'gut-brain axis'
       \item AD is characterized by neuroinflammation, neurofibrillary tangles, and aggregated amyloid-β plaques in the brain.
-      \item Mice with AD are pre-symptomatic at 8 weeks of age, have begun to exhibit AD pathologies at 24 weeks, and have advanced AD pathologies at 52 weeks.
+      \item Mouse models of AD are pre-symptomatic at 8 weeks of age, have begun to exhibit AD pathologies at 24 weeks, and have advanced AD pathologies at 52 weeks.
       \item These pathologies may be influenced by inflammatory cytokines produced in the gut.
     \end{itemize}
 
@@ -143,7 +143,7 @@
     \caption{Graphical rendering of wet lab processes. Samples are collected
     at 8, 24, and 52 weeks. DNA and RNA are extracted. RNA is then reverse
     transcribed to cDNA. cDNA undergoes qPCR, and the resulting data are
-    analyzed. Concurrently, the 16s rRNA gene is amplified using Polymerase
+    analyzed. Concurrently, the 16S rRNA gene is amplified using Polymerase
     Chain Reaction (PCR). Sequencing is performed with an Illumina MiSeq, and
     the resulting data are analyzed with QIIME 2.}
     \label{fig:lab_methods}
@@ -154,7 +154,7 @@
 
   \begin{block}{Bioinformatics Methods}
 
-    Analysis of 16s rRNA data was performed with QIIME 2 2020.2 \cite{framework|qiime2:2020.2.0|0}
+    Analysis of 16S rRNA data was performed with QIIME 2 2020.2 \cite{framework|qiime2:2020.2.0|0}
     \begin{itemize}
       \item {sequence data demultiplexing and quality filtering: \code{q2‐demux}.}
       \item {denoising to amplicon sequence variants (ASVs): DADA2 (Callahan et al. 2016) (via \code{q2‐dada2}).}
@@ -233,10 +233,11 @@
           \includegraphics[width=\linewidth]{assets/w_unifrac_extraction}
         \end{center}
       \endminipage\hfill
-      \caption{Weighted Unifrac PCoA plots colored on "age in weeks" and
-      "extraction" show meaningful separation. They also show that all 8-week
-      samples were extracted together, as were all 24-weeks samples,
-      complicating interpretation.}
+      \caption{Weighted Unifrac PCoA plots colored by "age in weeks" and
+      "extraction" suggest differences in the composition of the microbiota
+      sampled at different time points and in different extraction groups.
+      They also show that all 8-week samples were extracted together, as were
+      all 24-weeks samples, complicating interpretation.}
       \label{fig:qpcrResults}
     \end{figure}
 
@@ -260,10 +261,10 @@
         \item Arg1 and Nos2 cytokines are expressed at significantly higher levels at 52 weeks than at 8 weeks.
       \end{itemize}
 
-      \textbf{16s results:}
+      \textbf{16S results:}
       \begin{itemize}
-      \item At 8 and 24 weeks, we see no statistically significant differences in alpha or beta diversity on Strain.
-      \item We see significant difference on age-week, but our extraction scheme may confound these results*.
+      \item At 8 and 24 weeks, we see no statistically significant alpha or beta diversity differences between 3xTg-AD and WT mouse microbiota.
+      \item We see significant differences in microbiota compositions between 8 and 24-week samples, but our extraction scheme may confound these results*.
       \item Order Erysipelotrichales is the most important taxon in describing change over time from 8->24 weeks.
       \end{itemize}
 
@@ -292,7 +293,7 @@
   \begin{block}{Discussion}
     Though complete longitudinal data are not yet available, the results
     to date support our hypothesis: qPCR data indicates that our most
-    significant results are at 52 weeks, as expected. Our final round of 16s
+    significant results are at 52 weeks, as expected. Our final round of 16S
     sequencing has been delayed, but we look forward to its completion, and
     hope the trends we see in qPCR bear out.
   \end{block}
@@ -300,7 +301,7 @@
   \begin{block}{Future Work}
 
     \begin{itemize}
-      \item \textbf{52-Week Analysis} Investigation of correlations between qPCR findings and 52-week 16s data.
+      \item \textbf{52-Week Analysis} Investigation of correlations between qPCR findings and 52-week 16S data.
       \item \textbf{Immunohistochemistry} Quantification of neurofibrillary tangles and amyloid-β plaques.
     \end{itemize}
 
