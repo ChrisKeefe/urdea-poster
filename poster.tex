@@ -156,13 +156,13 @@
 
     Analysis of 16S rRNA data was performed with QIIME 2 2020.2 \cite{framework|qiime2:2020.2.0|0}
     \begin{itemize}
-      \item {sequence data demultiplexing and quality filtering: \code{q2‐demux}.}
-      \item {denoising to amplicon sequence variants (ASVs): DADA2 (Callahan et al. 2016) (via \code{q2‐dada2}).}
-      \item {phylogeny constructed by inserting ASVs into a greengenes 13\_8 reference database using SEPP (via \code{q2‐fragment-insertion}).}
-      \item {taxonomic annotations assigned from greengenes 13\_8 99\% OTUs (McDonald et al. 2012) using \code{q2‐feature‐classifier classify-sklearn} (Bokulich et al. 2018a).}
-      \item {unequal sampling depths were normalized by rarefying to 13102 sequences per sample.}
-      \item {diversity analysis \code{q2-diversity} \code{q2-emperor} and \code{q2-longitudinal}.}
-      \item {differential abundance: ANCOM via \code{q2-composition}.}
+      \item {sequence data demultiplexing and quality filtering: \code{q2‐demux}\cite{action|demux:2020.2.0|method:emp_paired|0}.}
+      \item {denoising to amplicon sequence variants (ASVs): DADA2 (via \code{q2‐dada2}\cite{plugin|dada2:2020.2.0|0}).}
+      \item {phylogeny constructed by inserting ASVs into a greengenes 13\_8 reference database using SEPP (via \code{q2‐fragment-insertion}\cite{plugin|fragment-insertion:2020.2.0|0}\cite{plugin|fragment-insertion:2020.2.0|1}\cite{plugin|fragment-insertion:2020.2.0|2}).}
+      \item {taxonomic annotations assigned from greengenes 13\_8 99\% OTUs using \code{q2‐feature‐classifier classify-sklearn}\cite{plugin|feature-classifier:2020.2.0|0}\cite{action|feature-classifier:2020.2.0|method:classify_sklearn|0}.}
+      \item {unequal sampling depths were normalized by rarefying to 13,102 sequences per sample.}
+      \item {diversity analysis: \code{q2-diversity}\cite{action|diversity:2020.2.0|visualizer:alpha_correlation|0}\cite{action|diversity:2020.2.0|visualizer:alpha_correlation|1}\cite{action|diversity:2020.2.0|visualizer:alpha_group_significance|0}\cite{action|diversity:2020.2.0|method:alpha_phylogenetic|0} \code{q2-emperor}\cite{plugin|emperor:2020.2.0|0}\cite{plugin|emperor:2020.2.0|1} and \code{q2-longitudinal}\cite{plugin|longitudinal:2020.2.0|0}.}
+      \item {differential abundance: ANCOM via \code{q2-composition}\cite{plugin|composition:2021.2.0|0}.}
     \end{itemize}
 
     Analysis of qPCR data was performed with Microsoft Excel and GraphPad Prism
