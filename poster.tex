@@ -34,7 +34,7 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage[size=custom,width=130 ,height=100,scale=1.0]{beamerposter}
+\usepackage[size=custom,width=130 ,height=195,scale=1.0]{beamerposter}
 \usetheme{gemini}
 \usecolortheme{gemini}
 \usepackage{graphicx}
@@ -255,67 +255,13 @@
 \separatorcolumn
 
 \begin{column}{\colwidth}
-    \begin{block}{Results}
-      \textbf{qPCR results:}
-      \begin{itemize}
-        \item Humanized 3xTg-AD mice express significantly higher levels of Arg1 and Nos2 cytokines than age-matched Wild Type mice.
-        \item Arg1 and Nos2 cytokines are expressed at significantly higher levels at 52 weeks than at 8 weeks.
-      \end{itemize}
-
-      \textbf{16S results:}
-      \begin{itemize}
-      \item At 8 and 24 weeks, we see no statistically significant alpha or beta diversity differences between 3xTg-AD and WT mouse microbiota.
-      \item We see significant differences in microbiota compositions between 8 and 24-week samples, but our extraction scheme may confound these results*.
-      \end{itemize}
-
-    \begin{tcolorbox}
-    [width=\textwidth, colframe=blue]
-      * DNA was extracted from all 8-week samples in one batch, and all
-      24-weeks samples in another. Though we find significant changes in
-      alpha and beta diversity over time, it is impossible for us to rule out
-      extraction bias as a confounding factor. Control samples extracted
-      and sequenced alongside our ileum samples may allow us to control for 
-      that effect and avoid re-sequencing for future publications. 
-    \end{tcolorbox}
-
-  \begin{figure}[tph!]
-    {\includegraphics[width=.75\linewidth]{assets/faith_pd_group_sig_strain}}
-    {\includegraphics[width=.75\linewidth]{assets/faith_pd_group_sig_extraction}}
-      \caption{\,When considering 8 and 24 week samples, alpha group
-      significance plots of Faith's Phylogenetic Diversity show significant
-      (p < 0.0035) differences across mouse age/extraction groups*, but no
-      significant difference across strain}
-      \label{fig:faith_strain}
-    \end{figure}
-
-  \end{block}
-
-  \begin{block}{Discussion}
-    Though complete longitudinal data are not yet available, the results
-    to date support our hypothesis: qPCR data indicates that our most
-    significant results are at 52 weeks, as expected. Our final round of 16S
-    sequencing has been delayed, but we look forward to its completion, and
-    hope the trends we see in qPCR bear out.
-  \end{block}
-
-  \begin{block}{Future Work}
-
-    \begin{itemize}
-      \item \textbf{52-Week Analysis} Investigation of correlations between qPCR findings and 52-week 16S data.
-      \item \textbf{Immunohistochemistry} Quantification of neurofibrillary tangles and amyloid-β plaques.
-    \end{itemize}
-
-  \end{block}
 
   \begin{block}{References and Poster Source}
     \nocite{*}
-    \bibliographystyle{naturemag}\nobibliography{poster}
+    \bibliographystyle{naturemag}\bibliography{poster}
     
     \begin{figure}
       \begin{minipage}[c]{\textwidth}
-        Complete references available at https://github.com/chriskeefe/urdea-poster/refs.pdf
-        \newline
-        \includegraphics[height=5cm]{assets/refs_qr.png}
         \hfill
         \includegraphics[height=5cm]{assets/repo}
       \end{minipage}
